@@ -8,7 +8,7 @@ const spaceGrotesk = Space_Grotesk({
   weight: ['300', '400', '500', '600', '700']
  })
 export const metadata: Metadata = {
-  title: "DataVortex",
+  title: "DealDetective",
   description: "Empower your business with our advanced data scraping service, extracting valuable insights from the web efficiently and reliably. Harness the power of automation to gather, analyze, and leverage data seamlessly.",
 };
 
