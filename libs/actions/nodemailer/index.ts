@@ -82,31 +82,63 @@ export async function generateEmailBody(
   return { subject, body };
 }
 
+// const transporter = nodemailer.createTransport({
+//   pool: true,
+//   service: 'hotmail',
+//   port: 587, // Use the correct port for Hotmail
+//   secure: false, // Set to true if using port 465
+//   auth: {
+//     user: 'zoyah234@outlook.com',
+//     pass: 'Zoya@123',
+//   },
+//   maxConnections: 1,
+// });
+
+// export const sendEmail = async (emailContent: EmailContent, sendTo: string[]) => {
+//   const mailOptions = {
+//     from: 'zoyah234@outlook.com',
+//     to: sendTo,
+//     html: emailContent.body,
+//     subject: emailContent.subject,
+//   };
+
+//   transporter.sendMail(mailOptions, (error: any, info: any) => {
+//     if (error) {
+//       console.error("Error sending email:", error);
+//       console.error("Error code:", error.code);
+//       console.error("Error response:", error.response);
+//       return;
+//     }
+//     console.log('Email sent:', info.response);
+//   });
+// };
 const transporter = nodemailer.createTransport({
-  pool: true,
-  service: 'hotmail',
-  port: 587, // Use the correct port for Hotmail
-  secure: false, // Set to true if using port 465
+  pool:true,
+  service: 'gmail', 
+  port:587,
+  secure:false,
   auth: {
-    user: 'zoyah234@outlook.com',
-    pass: 'Zoya@123',
+    user: 'zoyah768@gmail.com',
+    pass: 'ksha odyf dfyw eptm', 
   },
-  maxConnections: 1,
+  maxConnections:1,
 });
 
+// Function to send an email
 export const sendEmail = async (emailContent: EmailContent, sendTo: string[]) => {
   const mailOptions = {
-    from: 'zoyah234@outlook.com',
+    from: 'zoyah768@gmail.com', 
     to: sendTo,
-    html: emailContent.body,
-    subject: emailContent.subject,
+    html: emailContent.body, 
+    subject: emailContent.subject, 
   };
 
+  // Send the email
   transporter.sendMail(mailOptions, (error: any, info: any) => {
     if (error) {
-      console.error("Error sending email:", error);
-      console.error("Error code:", error.code);
-      console.error("Error response:", error.response);
+      console.error('Error sending email:', error);
+      console.error('Error code:', error.code);
+      console.error('Error response:', error.response);
       return;
     }
     console.log('Email sent:', info.response);

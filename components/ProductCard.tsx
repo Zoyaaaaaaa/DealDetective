@@ -23,7 +23,7 @@ const ProductCard = ({product}:Props) => {
             </h3>
         <div className='flex justify-between'>
 
-            <p className='text-black opacity-50 text-lg capitalize'>{product.category}</p>
+            {/* <p className='text-black opacity-50 text-lg capitalize'>{product.category}</p> */}
             <p className="text-black">
                 <span>{product?.currency}</span>
                 <span>{product?.currentPrice}</span>

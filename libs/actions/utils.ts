@@ -111,8 +111,9 @@ export const getEmailNotifType = (
 };
 
 export const formatNumber = (num: number = 0) => {
-  return num.toLocaleString(undefined, {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  });
+  const [whole, decimal] = num.toString().split('.');
+  const lastThreeDigits = whole.slice(-3);
+  const otherDigits = whole.slice(0, -3);
+  const formattedWhole = otherDigits.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + (otherDigits ? "," : "") + lastThreeDigits;
+  return `${formattedWhole}${decimal ? '.' + decimal : ''}`;
 };

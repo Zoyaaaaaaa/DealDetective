@@ -7,6 +7,7 @@ export type PriceHistoryItem = {
   };
   
   export type Product = {
+    // id: string;
     _id?: string;
     url: string;
     currency: string;
