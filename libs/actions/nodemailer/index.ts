@@ -119,7 +119,7 @@ const transporter = nodemailer.createTransport({
   secure:false,
   auth: {
     user: 'zoyah768@gmail.com',
-    pass: 'ksha odyf dfyw eptm', 
+    pass: process.env.EMAIL_PASSWORD_GMAIL, 
   },
   maxConnections:1,
 });
