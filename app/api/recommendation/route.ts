@@ -337,7 +337,7 @@ export async function POST(req: NextRequest) {
 
     // Generate product recommendation object using Groq
     const { object } = await generateObject({
-      model: groq('llama-3.1-70b-versatile'),
+      model: groq('llama-3.3-70b-versatile'),
       schema: ProductRecommendationSchema,
       prompt: `Based on the product description below, generate a detailed recommendation:
         "${trimmedDescription}"
