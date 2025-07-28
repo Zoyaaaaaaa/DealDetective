@@ -25,8 +25,7 @@ Monitor price changes over time for your favorite products. Set alerts to get no
 **🔍 Search and Filter**
 Easily search and filter products to find exactly what you're looking for. Our advanced search functionality ensures you find the best deals quickly.
 
-**📦 Inventory Management**
-For businesses, optimize your product lineup based on real-time data. Manage inventory efficiently and maximize your profits.
+
 
 Here are the images of DealDetective:
 
